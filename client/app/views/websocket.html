@@ -1,0 +1,43 @@
+<div class="row" style="color: white; margin-bottom: 30px">
+<button type="button" ng-disabled="connected" ng-click="connect()" class="btn btn-lg" style="background-color: #B6B6B6; color:white;">
+  <span class="glyphicon glyphicon-saved" aria-hidden="true"></span> Connect
+</button>
+</div>
+<div style="text-align: center">
+<div class="row" style="color: white;">
+  <div class="col-md-3" style="background-color: #0288D1;">
+    <div class="row title">
+      CPU
+    </div>
+    <div ng-controller="CpuCtrl" class="row value">
+    {{ value }}
+    </div>
+  </div>
+  <div class="col-md-3" style="background-color: #03A9F4;">
+    <div class="row title">
+      RAM
+    </div>
+    <div ng-controller="RamCtrl" class="row value">
+    {{ value }}
+    </div>
+  </div>
+</div>
+<div class="row" style="color: white;">
+  <div class="col-md-3" style="background-color: #727272;">
+    <div class="row title">
+      Disk
+    </div>
+    <div ng-controller="DiskCtrl" class="row value">
+    {{ value }}
+    </div>
+  </div>
+  <div class="col-md-3" style="background-color: #212121;">
+    <div class="row title">
+      Network
+    </div>
+    <div ng-controller="NetworkCtrl" class="row value">
+    {{ value }}
+    </div>
+  </div>
+</div>
+</div>
