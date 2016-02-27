@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc service
- * @name websocketApp.websocketFactory
+ * @name MonitoringClientApp.websocketFactory
  * @description
  * # websocketFactory
- * Factory in the websocketApp.
+ * Factory in the MonitoringClientApp.
  */
-angular.module('websocketApp')
+angular.module('MonitoringClientApp')
   .factory('WebSocketFactory', function () {
         var service = {};
         service.callbacks = {}; //note the object declaration, not Array

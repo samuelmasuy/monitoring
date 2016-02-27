@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name websocketApp.controller:CpuCtrl
+ * @name MonitoringClientApp.controller:CpuCtrl
  * @description
  * # CpuCtrl
- * Controller of the websocketApp
+ * Controller of the MonitoringClientApp
  */
-angular.module('websocketApp')
+angular.module('MonitoringClientApp')
   .controller('CpuCtrl', function ($scope, WebSocketFactory) {
       WebSocketFactory.subscribe('cpu', function (value) {
         console.log('cpu', value);

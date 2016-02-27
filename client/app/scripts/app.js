@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name websocketApp
+ * @name MonitoringClientApp
  * @description
- * # websocketApp
+ * # MonitoringClientApp
  *
  * Main module of the application.
  */
 angular
-  .module('websocketApp', [
+  .module('MonitoringClientApp', [
     'ngAnimate',
     'ngResource',
     'ngRoute',

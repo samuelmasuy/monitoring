@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name websocketApp.controller:WebsocketCtrl
+ * @name MonitoringClientApp.controller:WebsocketCtrl
  * @description
  * # WebsocketCtrl
- * Controller of the websocketApp
+ * Controller of the MonitoringClientApp
  */
-angular.module('websocketApp')
+angular.module('MonitoringClientApp')
   .controller('WebSocketCtrl', function ($scope, WebSocketFactory) {
       $scope.connect = function() {
         WebSocketFactory.connect();

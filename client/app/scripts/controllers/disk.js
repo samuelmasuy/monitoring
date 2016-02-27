@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name websocketApp.controller:DiskCtrl
+ * @name MonitoringClientApp.controller:DiskCtrl
  * @description
  * # DiskCtrl
- * Controller of the websocketApp
+ * Controller of the MonitoringClientApp
  */
-angular.module('websocketApp')
+angular.module('MonitoringClientApp')
   .controller('DiskCtrl', function ($scope, WebSocketFactory) {
       WebSocketFactory.subscribe('disk', function (value) {
         console.log('disk', value);

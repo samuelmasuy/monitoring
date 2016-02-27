@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name websocketApp.controller:NetworkCtrl
+ * @name MonitoringClientApp.controller:NetworkCtrl
  * @description
  * # NetworkCtrl
- * Controller of the websocketApp
+ * Controller of the MonitoringClientApp
  */
-angular.module('websocketApp')
+angular.module('MonitoringClientApp')
   .controller('NetworkCtrl', function ($scope, WebSocketFactory) {
       WebSocketFactory.subscribe('net', function (value) {
         console.log('network', value);
