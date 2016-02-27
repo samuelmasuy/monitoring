@@ -93,7 +93,7 @@ func serveWs(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.Handle("/", http.FileServer(http.Dir("../client/dist/")))
+	http.Handle("/", http.FileServer(http.Dir("./client/dist/")))
 	http.HandleFunc("/ws", serveWs)
 	if err := http.ListenAndServe(addr, nil); err != nil {
 		log.Fatal(err)
