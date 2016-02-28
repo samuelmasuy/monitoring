@@ -37,6 +37,7 @@ func GetMonitoring() ([]byte, error) {
 	diskUsage, err := disk.DiskUsage("/")
 	if err != nil {
 		log.Println("err", err)
+		return nil, err
 	}
 	diskValue := bytefmt.ByteSize(diskUsage.Used)
 	diskMonitor := &Monitor{To: "disk", Data: diskValue}
@@ -45,6 +46,7 @@ func GetMonitoring() ([]byte, error) {
 	ramPercent, err := mem.VirtualMemory()
 	if err != nil {
 		log.Println("err", err)
+		return nil, err
 	}
 	ramValue := strconv.FormatFloat(ramPercent.UsedPercent, 'f', 2, 64)
 	ramValue = ramValue + "%"
@@ -54,6 +56,7 @@ func GetMonitoring() ([]byte, error) {
 	netUsages, err := net.NetIOCounters(false)
 	if err != nil {
 		log.Println("err", err)
+		return nil, err
 	}
 	netUsage := netUsages[0]
 	netValue := bytefmt.ByteSize(netUsage.BytesRecv)

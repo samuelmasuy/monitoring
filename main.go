@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/gorilla/websocket"
-	"github.com/samuelmasuy/websocket/server/monitoring"
+	"github.com/samuelmasuy/monitoring/monitoring"
 )
 
 const (
@@ -45,7 +45,6 @@ func reader(ws *websocket.Conn) {
 }
 
 func writer(ws *websocket.Conn) {
-	lastError := ""
 	pingTicker := time.NewTicker(pingPeriod)
 	monitorTicker := time.NewTicker(monitorPeriod)
 	defer func() {
@@ -61,7 +60,7 @@ func writer(ws *websocket.Conn) {
 
 			m, err = monitoring.GetMonitoring()
 			if err != nil {
-				m = []byte(s.Error())
+				m = []byte(err.Error())
 			}
 
 			if m != nil {
